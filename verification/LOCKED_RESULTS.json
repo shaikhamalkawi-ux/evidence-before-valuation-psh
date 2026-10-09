@@ -1,0 +1,26 @@
+{
+  "baseline": "ECON_CERT_R26R1_ExternalReaderClarityClosure",
+  "hatta": {
+    "reported_2025_generation_mwh": 48222,
+    "storage_energy_mwh": 1500,
+    "favorable_throughput_fde_per_year": 32.148,
+    "primary_strict_boundary_fde_per_year": [54.636, 105.883],
+    "primary_required_q_at_32_148": [1.700, 2.815],
+    "q_domain": [0.0, 1.0]
+  },
+  "wivenhoe_2025": {
+    "episodes": 6,
+    "accepted_five_minute_intervals": 90,
+    "missing_generation_intervals": 0,
+    "generation_gt_1mw_intervals": 79,
+    "episodes_with_positive_generation_throughout": 5,
+    "june_12_episode": {
+      "episode": "EP25_04",
+      "accepted_intervals": 11,
+      "generation_gt_1mw_intervals": 0,
+      "energy_target_gt_1mw_intervals": 0,
+      "intervals_with_any_raise_target": 0,
+      "diagnostic": "ZERO_OUTPUT_ZERO_ENERGY_TARGET_ALL_INTERVALS"
+    }
+  }
+}
