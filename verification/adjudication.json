@@ -1,0 +1,35 @@
+{
+  "analysis": "Wivenhoe 2025 field-attribution development gate",
+  "source": "AEMO DISPATCHLOAD",
+  "six_episode_census_locked": true,
+  "total_expected_intervals": 90,
+  "june12": {
+    "episode": "EP25_04",
+    "start": "2025-06-12 06:30:00",
+    "end": "2025-06-12 07:25:00",
+    "max_lor": 1,
+    "expected_intervals": 11,
+    "complete_intervals": 11,
+    "missing": 0,
+    "initial_gt_1mw_intervals": 0,
+    "target_gt_1mw_intervals": 0,
+    "min_gen_initial_mw": 0.0,
+    "max_gen_initial_mw": 0.0,
+    "min_gen_target_mw": 0.0,
+    "max_gen_target_mw": 0.0,
+    "intervals_with_any_raise_target": 0,
+    "energy_target_diagnostic": "ZERO_OUTPUT_ZERO_ENERGY_TARGET_ALL_INTERVALS",
+    "claim_boundary": "Descriptive named-unit dispatch/FCAS attribution only; no failure, availability, SOC, causal response, avoided-loss, or Hatta inference."
+  },
+  "positive_control_2016": {
+    "status": "DOCUMENTARY_EXTERNAL_CONTROL",
+    "finding": "AEMO reported Wivenhoe PS Unit 2 dispatch target reduced 250->40 MW and Delayed Raise availability increased 0->210 MW.",
+    "use": "Demonstrates public named-unit target/FCAS attribution is possible when source evidence exists; not part of 2025 census."
+  },
+  "claim_boundary": [
+    "No inference of plant failure or non-availability from target/output mismatch alone.",
+    "No reservoir state or stored-energy sufficiency inference.",
+    "No E4 avoided economic loss inference.",
+    "No transfer to Hatta."
+  ]
+}
