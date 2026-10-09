@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated manuscript and the archived release DOI when available."
+title: "Evidence Before Valuation: Project-Level Attribution and Decision Boundaries in Pumped-Storage Hydropower"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Malkawi
+    given-names: Ghassan
+    orcid: "https://orcid.org/0000-0002-5320-7561"
+  - family-names: Elsayed
+    given-names: Ahmed
+    orcid: "https://orcid.org/0000-0002-9255-200X"
+  - family-names: Alhagyan
+    given-names: Mohammed
+    orcid: "https://orcid.org/0000-0003-4090-6125"
+  - family-names: Hussein
+    given-names: Bakeel
+repository-code: "https://github.com/shaikhamalkawi-ux/evidence-before-valuation-psh"
+abstract: >-
+  Reproducibility resources for an evidence-before-valuation analysis of
+  pumped-storage hydropower using Hatta as the economic decision application
+  and Wivenhoe as an independent operational-data attribution test.
+keywords:
+  - pumped-storage hydropower
+  - energy-storage valuation
+  - project-level attribution
+  - partial identification
+  - ancillary services
+  - decision boundaries
