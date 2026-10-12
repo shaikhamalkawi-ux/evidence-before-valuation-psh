@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "results_parity_pass": true,
+  "document_parity_exact": false,
+  "work_root_was_temporary": true,
+  "document_internal_contents_parity": true,
+  "document_internal_mismatched_parts": [],
+  "container_bytes_differ_only_due_to_zip_metadata": true
+}

@@ -1,0 +1,23 @@
+{
+  "active_source_baseline": "ECON_CERT_R26R1_ExternalReaderClarityClosure",
+  "source_scope": "archived, previously filtered AEMO DISPATCHLOAD Jan/Jun 2025, not a new full-year causal study",
+  "aemo_field_meanings": "https://visualisations.aemo.com.au/aemo/nemweb/MMSDataModelReport/Electricity/MMS%20Data%20Model%20Report_files/MMS_128.htm",
+  "flag_encoding": {
+    "0": "Not enabled (FCAS market status)",
+    "1": "Enabled",
+    "3": "Trapped and enabled",
+    "4": "Stranded and not enabled"
+  },
+  "qualifier": "Actual FCAS availability is bid/trapezium post-processed market dispatch quantity; not verified physical readiness/delivery.",
+  "included_episode_intervals": 90,
+  "included_duid_interval_records": 360,
+  "source_filtered_month_records": 70272,
+  "unadjusted_selected_2025_MWh_equivalent_Hatta": 32.148,
+  "Hatta_primary_strict_frontiers_FDE_per_year": [
+    54.636,
+    105.883
+  ],
+  "Hatta_2025_mature_run_rate_identified": false,
+  "R26R1_inherited_episode_locks_preserved": true,
+  "checks_passed": 50
+}

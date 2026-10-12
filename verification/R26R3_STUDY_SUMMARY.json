@@ -1,0 +1,41 @@
+{
+  "input_source": "R26R2 supplement, identified by SHA-256; not included in this repository",
+  "input_pdf_sha256": "09bbaab6668f00a466d701b3178a0b016ec35cfd02d61de649f960af2cd0b178",
+  "n_ann_years": 7,
+  "n_om_cost_anchors": 6,
+  "n_full_cases": 24,
+  "n_scope_comparisons": 48,
+  "n_published_display_checks": 120,
+  "pass_display_checks": 120,
+  "N_favorable_throughput_only": 32.148,
+  "capital_million_2025USD": 386.929884275017,
+  "full_scope_strict_positive_q1_24": 0,
+  "full_scope_minimax_H_q1_24": 0,
+  "op_scope_strict_positive_q1_24": 10,
+  "op_scope_strict_positive_q1_unique_12": 5,
+  "op_scope_minimax_H_q1_unique_12": 6,
+  "op_scope_MM_not_strict_unique_12": 1,
+  "all_48_q0_margins_negative": true,
+  "leave_year_out_cases": 84,
+  "leave_year_out_full_scope_positive": 0,
+  "leave_year_out_operating_positive_each_year": 5,
+  "global_min_full_event_value_floor_million": 0.2584802648201354,
+  "global_min_full_required_B_multiplier_to_archived_min": 1.6995105878726249,
+  "global_min_full_required_B_multiplier_to_archived_max": 1.417013490450932,
+  "operating_positive_margins_million_per_year_range": [
+    0.008082936232,
+    1.416421468
+  ],
+  "closest_positive_operating": {
+    "scenario": "P6",
+    "anchor": "1000_P",
+    "margin_million_per_year": 0.008082936232,
+    "q_floor_required": 0.9983468522227219,
+    "B_downward_buffer_percent": 0.16531477772780967,
+    "certification_requires_E2_E3_E4": true
+  },
+  "unconditional_economic_certificate": "NOT_ESTABLISHED; q can be zero and E4 not observed",
+  "DOE_tool_ran": false,
+  "note": "A hand-implemented CBA structure compatible with guidebook is not a run of official Argonne PSHVT",
+  "R26R2_locked_results_changed": false
+}

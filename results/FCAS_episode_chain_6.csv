@@ -1,0 +1,7 @@
+episode,intervals,generation_observed_gt1MW,generation_target_gt1MW,raise_fcas_target_any,raise_reg_enabled_flag_any,raise_reg_actual_availability_positive_any,raise_reg_target_positive_any,raise_reg_actual_avail_positive_but_target_zero
+EP25_01,33,33,33,33,33,33,33,0
+EP25_02,21,21,21,14,21,19,14,5
+EP25_03,9,9,9,5,8,5,5,0
+EP25_04,11,0,0,0,0,0,0,0
+EP25_05,7,7,7,0,0,0,0,0
+EP25_06,9,9,9,0,0,0,0,0

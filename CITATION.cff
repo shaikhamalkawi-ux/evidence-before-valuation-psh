@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite the associated manuscript and the archived release DOI when available."
-title: "Evidence Before Valuation: Project-Level Attribution and Decision Boundaries in Pumped-Storage Hydropower"
+message: "If you use this software or data, cite the associated manuscript and identify the archived version when it becomes public."
+title: "From Generation Records to Economic Claims: Evidence Boundaries for Pumped-Storage Hydropower"
 type: software
-version: 0.1.0
+version: 0.2.0
 authors:
   - family-names: Malkawi
     given-names: Ghassan
@@ -17,9 +17,9 @@ authors:
     given-names: Bakeel
 repository-code: "https://github.com/shaikhamalkawi-ux/evidence-before-valuation-psh"
 abstract: >-
-  Reproducibility resources for an evidence-before-valuation analysis of
-  pumped-storage hydropower using Hatta as the economic decision application
-  and Wivenhoe as an independent operational-data attribution test.
+  Reproducibility resources for an evidence-boundary analysis of pumped-storage
+  hydropower, using Hatta as the economic decision application and Wivenhoe as
+  an independent operational-data attribution test.
 keywords:
   - pumped-storage hydropower
   - energy-storage valuation

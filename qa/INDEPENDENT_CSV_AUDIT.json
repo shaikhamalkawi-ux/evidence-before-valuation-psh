@@ -1,0 +1,13 @@
+{
+  "raw_rows": 70272,
+  "joined_rows": 360,
+  "intervals": 90,
+  "gen_duid_counts": 180,
+  "RaiseReg_market_flag_enabled_gen_duid_rows": 97,
+  "RaiseReg_computed_availability_positive_gen_duid_rows": 92,
+  "RaiseReg_target_positive_gen_duid_rows": 82,
+  "positive_avail_no_target_gen_duid_rows": 10,
+  "positive_avail_no_target_station_intervals": 5,
+  "Jun12_all_operational_fields_zero_across_44_DUID_intervals": true,
+  "PASS": true
+}

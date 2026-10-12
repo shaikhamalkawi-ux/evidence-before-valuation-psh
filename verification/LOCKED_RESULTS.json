@@ -1,5 +1,5 @@
 {
-  "baseline": "ECON_CERT_R26R1_ExternalReaderClarityClosure",
+  "baseline": "ECON_CERT_R26R3",
   "hatta": {
     "reported_2025_generation_mwh": 48222,
     "storage_energy_mwh": 1500,
@@ -14,13 +14,20 @@
     "missing_generation_intervals": 0,
     "generation_gt_1mw_intervals": 79,
     "episodes_with_positive_generation_throughout": 5,
+    "positive_energy_targets": 79,
+    "raise_reg_enabled_intervals": 62,
+    "positive_computed_raise_reg_availability_intervals": 57,
+    "positive_raise_reg_targets": 52,
+    "positive_availability_zero_target_intervals": 5,
     "june_12_episode": {
       "episode": "EP25_04",
       "accepted_intervals": 11,
       "generation_gt_1mw_intervals": 0,
       "energy_target_gt_1mw_intervals": 0,
       "intervals_with_any_raise_target": 0,
-      "diagnostic": "ZERO_OUTPUT_ZERO_ENERGY_TARGET_ALL_INTERVALS"
+      "diagnostic": "ZERO_OUTPUT_ZERO_ENERGY_TARGET_ALL_INTERVALS",
+      "generation_zero_all_intervals": true,
+      "pumping_zero_all_intervals": true
     }
   }
 }

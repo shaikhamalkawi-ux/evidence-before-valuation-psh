@@ -1,0 +1,42 @@
+{
+  "active_editorial_version": "ECON_CERT_TESEA_P2_EditorialClosure_20261011",
+  "active_scientific_baseline": "ECON_CERT_R26R3",
+  "supporting_research_only": "R26R4_SourceGate_Executed; DO NOT integrate without source admissions",
+  "target_journal": "Transactions on Energy Systems and Engineering Applications (TESEA)",
+  "current_manuscript_pages": 39,
+  "hattadata": {
+    "2025_reported_generation_mwh": 48222,
+    "nameplate_storage_mwh_per_full_discharge_equivalent": 1500,
+    "favorable_throughput_equivalent_fde": 32.148,
+    "full_investment_primary_strict_boundary_fde_year": [
+      54.636,
+      105.883
+    ],
+    "full_investment_primary_q_requirement_at_32_148": [
+      1.7,
+      2.815
+    ],
+    "admission": "PUBLIC_INFORMATION_NO_CERTIFICATE",
+    "notes": "Positive operational margin in 5/12 cases at q=1 is hypothetical and depends on external 1000 MW O&M reference rates. It does not prove Hatta profitability. Equality is no-certificate."
+  },
+  "wivenhoe2025": {
+    "episodes": 6,
+    "complete_5min_intervals": 90,
+    "positive_energy_targets": 79,
+    "raise_reg_enabled": 62,
+    "positive_computed_raise_reg_availability": 57,
+    "positive_raise_reg_targets": 52,
+    "target_zero_even_when_computed_availability_positive_intervals": 5,
+    "june_12_2025": "11/11 accepted intervals zero generation, zero pumping, zero recorded raise targets; no failure/unavailability/avoided-loss inference."
+  },
+  "no_new_admission": "No direct event-specific avoided-loss estimate for Hatta; no physical event-time joint service floor.",
+  "editorial_status": "TESEA P2 is NOT submission-ready until author metadata and layout QA issues are closed.",
+  "layout_open_items": [
+    "p13-p14 white-space/float placement",
+    "Figure 3 Type 3 font",
+    "Table A.4 STRICT-CERTIFICATE wrapping",
+    "some appendix tables/floats",
+    "confirm final author declarations"
+  ],
+  "source_reproducibility": "R26R3 and R26R2 packages contain admitted derived inputs/codes; original full OECD 2016-2022 ZIP not in current Drive inventory."
+}

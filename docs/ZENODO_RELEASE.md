@@ -1,27 +1,9 @@
-# Zenodo archival release plan
+# Zenodo release status and sequence
 
-Do **not** archive this repository in Zenodo until the public release contents and license have been checked.
+The P9 companion archive is being prepared as an unpublished reviewer draft. No public Zenodo record or functioning DOI is claimed here. A DOI reserved in a draft remains unpublished and is not a public citation.
 
-Recommended sequence:
+The Zenodo archive is uploaded as a separate manual deposit. Do not also enable automatic GitHub-to-Zenodo archiving for this payload; that can create a second DOI record for the same materials.
 
-1. Confirm that all repository files are publication-safe.
-2. Select the final public license.
-3. Tag the repository release (recommended first archival tag: `v1.0.0`).
-4. Connect the public GitHub repository to Zenodo.
-5. Archive the GitHub release in Zenodo.
-6. Record the Zenodo DOI in:
-   - `README.md`
-   - `CITATION.cff`
-   - the manuscript Data and Code Availability statement.
+After the journal documents acceptance, perform the final file and rights checks, publish the reviewed Zenodo draft, verify the public DOI resolves, and create a matching tagged GitHub release from the exact archived commit. Add the DOI to this README, `CITATION.cff`, and the final manuscript availability statement only after it is registered and resolving. After the article is published, add the article DOI as a related identifier.
 
-The Zenodo DOI should identify the immutable archival release. GitHub remains the development repository.
-
-## License decision still required
-
-A license has intentionally not yet been committed because the authors should explicitly choose the public licensing terms.
-
-A practical option is:
-- MIT for original code; and
-- a separate data/documentation notice for derived AEMO material with AEMO attribution requirements.
-
-Do not publish confidential or non-redistributable third-party material.
+The GitHub repository remains the working source. The Zenodo record will identify one immutable version. Preserve the exact commit SHA and archive SHA-256 in the handoff.

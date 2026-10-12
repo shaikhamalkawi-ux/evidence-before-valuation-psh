@@ -1,0 +1,21 @@
+antecedent,consequent,antecedent_true_intervals,counterexample_intervals,implication_holds_in_90_selected_intervals,first_counterexample_episode,first_counterexample_interval_end
+observed_initial_generation_gt1MW,energy_target_gt1MW,79,0,1,,
+observed_initial_generation_gt1MW,regulation_enabled_FCAS_flag,79,17,0,EP25_03,2025-06-11 19:05:00
+observed_initial_generation_gt1MW,regulation_computed_availability_positive,79,22,0,EP25_02,2025-06-04 19:00:00
+observed_initial_generation_gt1MW,regulation_dispatch_target_positive,79,27,0,EP25_02,2025-06-04 18:35:00
+energy_target_gt1MW,observed_initial_generation_gt1MW,79,0,1,,
+energy_target_gt1MW,regulation_enabled_FCAS_flag,79,17,0,EP25_03,2025-06-11 19:05:00
+energy_target_gt1MW,regulation_computed_availability_positive,79,22,0,EP25_02,2025-06-04 19:00:00
+energy_target_gt1MW,regulation_dispatch_target_positive,79,27,0,EP25_02,2025-06-04 18:35:00
+regulation_enabled_FCAS_flag,observed_initial_generation_gt1MW,62,0,1,,
+regulation_enabled_FCAS_flag,energy_target_gt1MW,62,0,1,,
+regulation_enabled_FCAS_flag,regulation_computed_availability_positive,62,5,0,EP25_02,2025-06-04 19:00:00
+regulation_enabled_FCAS_flag,regulation_dispatch_target_positive,62,10,0,EP25_02,2025-06-04 18:35:00
+regulation_computed_availability_positive,observed_initial_generation_gt1MW,57,0,1,,
+regulation_computed_availability_positive,energy_target_gt1MW,57,0,1,,
+regulation_computed_availability_positive,regulation_enabled_FCAS_flag,57,0,1,,
+regulation_computed_availability_positive,regulation_dispatch_target_positive,57,5,0,EP25_02,2025-06-04 18:35:00
+regulation_dispatch_target_positive,observed_initial_generation_gt1MW,52,0,1,,
+regulation_dispatch_target_positive,energy_target_gt1MW,52,0,1,,
+regulation_dispatch_target_positive,regulation_enabled_FCAS_flag,52,0,1,,
+regulation_dispatch_target_positive,regulation_computed_availability_positive,52,0,1,,

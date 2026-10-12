@@ -1,0 +1,202 @@
+[
+  {
+    "test": "input exists: WIVENHOE_DISPATCHLOAD_2025JAN_JUN.csv.gz",
+    "pass": true
+  },
+  {
+    "test": "input exists: AEMO_2025_WIVENHOE_EVENT_DISPATCH_DETAIL.csv",
+    "pass": true
+  },
+  {
+    "test": "input exists: AEMO_2025_WIVENHOE_EPISODE_DISPATCH_SUMMARY.csv",
+    "pass": true
+  },
+  {
+    "test": "R26R1 raw filtered row count = 70272",
+    "pass": true
+  },
+  {
+    "test": "R26R1 event interval detail row count = 90",
+    "pass": true
+  },
+  {
+    "test": "R26R1 event interval timestamps unique",
+    "pass": true
+  },
+  {
+    "test": "four original Wivenhoe DUIDs retained",
+    "pass": true
+  },
+  {
+    "test": "all raw time/DUID keys unique",
+    "pass": true
+  },
+  {
+    "test": "90 x 4 exact episode time joins",
+    "pass": true
+  },
+  {
+    "test": "complete four-DUID support at every accepted interval",
+    "pass": true
+  },
+  {
+    "test": "all six R26R1 episode labels retained",
+    "pass": true
+  },
+  {
+    "test": "RAISEREG flags use official domain",
+    "pass": true
+  },
+  {
+    "test": "RAISEREG core status/availability/target fields complete",
+    "pass": true
+  },
+  {
+    "test": "RAISEREG actual FCAS availability nonnegative",
+    "pass": true
+  },
+  {
+    "test": "RAISEREG FCAS target nonnegative",
+    "pass": true
+  },
+  {
+    "test": "RAISE5MIN flags use official domain",
+    "pass": true
+  },
+  {
+    "test": "RAISE5MIN core status/availability/target fields complete",
+    "pass": true
+  },
+  {
+    "test": "RAISE5MIN actual FCAS availability nonnegative",
+    "pass": true
+  },
+  {
+    "test": "RAISE5MIN FCAS target nonnegative",
+    "pass": true
+  },
+  {
+    "test": "RAISE60SEC flags use official domain",
+    "pass": true
+  },
+  {
+    "test": "RAISE60SEC core status/availability/target fields complete",
+    "pass": true
+  },
+  {
+    "test": "RAISE60SEC actual FCAS availability nonnegative",
+    "pass": true
+  },
+  {
+    "test": "RAISE60SEC FCAS target nonnegative",
+    "pass": true
+  },
+  {
+    "test": "RAISE6SEC flags use official domain",
+    "pass": true
+  },
+  {
+    "test": "RAISE6SEC core status/availability/target fields complete",
+    "pass": true
+  },
+  {
+    "test": "RAISE6SEC actual FCAS availability nonnegative",
+    "pass": true
+  },
+  {
+    "test": "RAISE6SEC FCAS target nonnegative",
+    "pass": true
+  },
+  {
+    "test": "INITIALMW present for all 360 entries",
+    "pass": true
+  },
+  {
+    "test": "TOTALCLEARED present for all 360 entries",
+    "pass": true
+  },
+  {
+    "test": "reaggregated 90 interval objects",
+    "pass": true
+  },
+  {
+    "test": "independent sum reproduces R26R1 gen_initial_mw",
+    "pass": true
+  },
+  {
+    "test": "independent sum reproduces R26R1 gen_target_mw",
+    "pass": true
+  },
+  {
+    "test": "independent sum reproduces R26R1 pump_initial_mw",
+    "pass": true
+  },
+  {
+    "test": "independent sum reproduces R26R1 pump_target_mw",
+    "pass": true
+  },
+  {
+    "test": "independent sum reproduces R26R1 gen_raisereg_target_mw",
+    "pass": true
+  },
+  {
+    "test": "all 6 x 5 R26R1 inherited episode result locks replay",
+    "pass": true
+  },
+  {
+    "test": "12 June 11 x 4 DUID rows found",
+    "pass": true
+  },
+  {
+    "test": "12 June all 44 DUID rows zero operational targets/status fields (not physical availability)",
+    "pass": true
+  },
+  {
+    "test": "12 June W/HOE#2 submitted energy MAXAVAIL 254MW is not physical availability",
+    "pass": true
+  },
+  {
+    "test": "10 unit interval FCAS actual availability positive target zero",
+    "pass": true
+  },
+  {
+    "test": "5 station interval FCAS availability positive, target zero",
+    "pass": true
+  },
+  {
+    "test": "unit actual avail without FCAS target only 4 June 2025",
+    "pass": true
+  },
+  {
+    "test": "actual FCAS availability positive requires enabled in observed records",
+    "pass": true
+  },
+  {
+    "test": "witness flags within official status semantics",
+    "pass": true
+  },
+  {
+    "test": "two trapped Raise Reg unit intervals",
+    "pass": true
+  },
+  {
+    "test": "one stranded Raise Reg unit interval",
+    "pass": true
+  },
+  {
+    "test": "95 Raise Reg enabled nontrapped generation-DUID rows",
+    "pass": true
+  },
+  {
+    "test": "three flag-enabled generator rows zero postprocessed actual FCAS availability",
+    "pass": true
+  },
+  {
+    "test": "Hatta favorable stress independent division",
+    "pass": true
+  },
+  {
+    "test": "Hatta favorable stress below minimum strict boundary",
+    "pass": true
+  }
+]

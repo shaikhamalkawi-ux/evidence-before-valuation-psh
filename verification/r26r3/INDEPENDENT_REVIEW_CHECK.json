@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "independent_float_checks": 240,
+  "economic_cases": 48,
+  "conditional_op_strict_12": 5,
+  "conditional_op_minimax_12": 6,
+  "all_q0_negative": true,
+  "near_threshold_mutation_checked": true,
+  "leave_year_out_rows": 84,
+  "B_years": 7,
+  "anchors": 6,
+  "public_event_value_not_admitted": true,
+  "modelled_hatta_qualifying_events": false,
+  "DOE_PSHVT_executed": false,
+  "new_reference_count": 73,
+  "original_math_preserved": true
+}

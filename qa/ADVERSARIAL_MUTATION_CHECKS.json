@@ -1,0 +1,26 @@
+[
+  {
+    "corruption": "erase_positive_availability_witness",
+    "rejected": true,
+    "exit_code": 1,
+    "error_tail": "AssertionError: 10 unit interval FCAS actual availability positive target zero"
+  },
+  {
+    "corruption": "add_unsupported_june12_service",
+    "rejected": true,
+    "exit_code": 1,
+    "error_tail": "AssertionError: independent sum reproduces R26R1 gen_raisereg_target_mw"
+  },
+  {
+    "corruption": "inject_nonofficial_flag",
+    "rejected": true,
+    "exit_code": 1,
+    "error_tail": "AssertionError: RAISEREG flags use official domain"
+  },
+  {
+    "corruption": "break_interval_join",
+    "rejected": true,
+    "exit_code": 1,
+    "error_tail": "AssertionError: 90 x 4 exact episode time joins"
+  }
+]

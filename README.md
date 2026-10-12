@@ -1,71 +1,43 @@
-# Evidence Before Valuation — Pumped-Storage Hydropower
+# ECON-CERT reproducibility resources
 
-Reproducibility resources for the manuscript:
+This repository accompanies **“From Generation Records to Economic Claims: Evidence Boundaries for Pumped-Storage Hydropower”** (ECON-CERT TESEA P9). It preserves the scientific baseline `ECON_CERT_R26R3` and the supporting Wivenhoe field-attribution records from R26R2. It contains code, compact derived tables, locked results, and provenance records; it is not a complete archive of every upstream raw source.
 
-**Evidence Before Valuation: Project-Level Attribution and Decision Boundaries in Pumped-Storage Hydropower**
+## Research scope and locked results
 
-## Purpose
+- Hatta reported 2025 generation: 48,222 MWh; storage energy per full-discharge equivalent: 1,500 MWh; favorable throughput stress: 32.148 FDE/year.
+- Primary strict Hatta decision boundary: 54.636–105.883 FDE/year; required service fraction at 32.148 FDE/year: q = 1.700–2.815, outside q ∈ [0,1]. The result is a public-information No-Certificate, not a finding of project failure or negative value.
+- Wivenhoe 2025 census: six Queensland Actual-LOR episodes and 90 accepted five-minute intervals. The records establish observed dispatch and market fields only; they do not establish physical availability, delivered reserve service, causal response, reservoir state, or avoided loss.
+- Wivenhoe is an operational-data attribution test, not a second economic valuation case and not validation of Hatta’s economic bridge.
 
-This repository supports an evidence-before-valuation analysis for pumped-storage hydropower (PSH). The study asks an upstream question: before assigning economic value to a storage service, does the available evidence identify the event-to-asset-to-service attribution required by that valuation claim?
+The machine-readable locks and derived Hatta tables are in `verification/` and `data/hatta_derived/`. Compact Wivenhoe derived inputs, source manifests, and outputs are in `data/`, `results/`, and `verification/`.
 
-The current study uses:
+## Reproduce and verify
 
-- **Hatta (United Arab Emirates)** as the economic decision application; and
-- **Wivenhoe (Queensland, Australia)** as an independent operational-data attribution test.
+Requirements: Python 3.10 or later and pandas 2.0 or later. From a fresh checkout, run:
 
-Wivenhoe is **not** a second economic valuation case and does **not** validate the Hatta economic bridge.
+```powershell
+python -m pip install -r requirements.txt
+python code/reproduce.py
+python code/independent_csv_audit.py
+python code/adversarial_checks.py
+python scripts/verify_locked_results.py
+```
 
-## Locked headline results
+`reproduce.py` regenerates the Wivenhoe result tables and 50 result checks from the included filtered January/June 2025 DISPATCHLOAD extract and event crosswalk. `independent_csv_audit.py` independently checks the key joins and findings using only Python’s standard library. `adversarial_checks.py` confirms four deliberately corrupted inputs are rejected. `verify_locked_results.py` checks the manuscript-level Hatta anchors and the Wivenhoe summary against the locked scientific baseline.
 
-The current submission-facing baseline preserves the following load-bearing results:
+These commands verify the included filtered data and derived results. They do not recreate the full analysis from every original OECD or AEMO monthly archive. `SHA256SUMS.txt` records hashes for the checked-in payload at this commit; the manifest excludes itself.
 
-- Reported Hatta 2025 generation: **48,222 MWh**
-- Storage energy per full-discharge equivalent: **1,500 MWh**
-- Deliberately favorable throughput-equivalent stress: **32.148 FDE/year**
-- Primary strict decision boundary: **54.636–105.883 FDE/year**
-- Primary required service fraction at 32.148 FDE/year: **q = 1.700–2.815**, outside the physical domain **q ∈ [0,1]**
-- Wivenhoe 2025 census: **6 Queensland Actual-LOR episodes, 90/90 accepted five-minute intervals**
-- 12 June 2025: **0/11** intervals with generation >1 MW, **0/11** with positive energy target, and **0/11** with any recorded Raise-FCAS target
+## Provenance and limits
 
-These statements do **not** imply project failure, physical non-availability, causal non-response, reservoir state, stored-energy sufficiency, delivered reserve service, or avoided economic loss unless the corresponding evidence is available.
+- `data/source_manifest.csv` records the official AEMO retrieval URLs, source sizes and SHA-256 values for the two source months.
+- The repository includes the previously filtered AEMO rows used by the Wivenhoe analysis, not the complete original January and June monthly ZIP archives. The full original OECD ICIO 2016–2022 ZIP is also not verified as preserved. These gaps are not filled with substitute or fabricated data.
+- Hatta derived tables are calculation outputs, not raw DEWA telemetry or a full copy of OECD input data. No confidential project correspondence, credentials, or local working archives are included.
+- AEMO publicly available material is attributed in the data documentation. Upstream sources and field definitions are linked in `data/README.md` and `data/source_manifest.csv`.
 
-## Repository layout
+## Citation and contributors
 
-- `scripts/` — reproducibility and verification code
-- `data/` — compact derived tables used in the operational-data audit
-- `docs/` — data-source, claim-boundary, and reproducibility notes
-- `verification/` — machine-readable result locks / QA outputs
+Citation metadata are in `CITATION.cff`. The four-author order is Ghassan Malkawi, Ahmed Elsayed, Mohammed Alhagyan, and Bakeel Hussein. The approved CRediT roles are recorded in `AUTHORS_AND_CONTRIBUTIONS.md`. Bakeel Hussein’s ORCID was not independently verified and is intentionally omitted.
 
-Large source archives are not stored here when a stable official source can be reacquired. Source URLs, file sizes, and SHA-256 checksums are recorded so the analysis can be reconstructed independently.
+## Rights
 
-## Data provenance
-
-The Wivenhoe operational analysis uses public Australian Energy Market Operator (AEMO) market data. AEMO permits use of its publicly released material with accurate and appropriate attribution. See AEMO's Copyright Permissions notice.
-
-The Hatta analysis relies on public project and reporting material. No confidential DEWA operational telemetry is included in this repository.
-
-## Reproduction
-
-1. Create a Python environment (Python 3.10+ recommended).
-2. Install dependencies listed in `requirements.txt`.
-3. Run the verification script in `scripts/`.
-4. Compare outputs with the locked values documented in `verification/`.
-
-A release archived in Zenodo is planned after the public repository is checked for publication-safe content and a final license is selected.
-
-## Authors / contributions
-
-- **Ghassan Malkawi** — Writing – original draft
-- **Ahmed Elsayed** — Methodology
-- **Mohammed Alhagyan** — Visualization
-- **Bakeel Hussein** — Writing – review & editing
-
-**Funding:** No specific funding was received for this work.
-
-## Citation
-
-Citation metadata are provided in `CITATION.cff`. A DOI will be added after the first archival release.
-
-## Status
-
-This repository supports a manuscript under preparation/submission. Numerical results and claim boundaries are version-controlled; changes that alter the science will be released as a new tagged version.
+`LICENSE` applies only to original code. Data and derived-table rights, attribution, and upstream gaps are described separately in `DATA_AND_RIGHTS.md`; the code license does not grant rights to third-party source material. No Zenodo DOI is claimed in this repository. The Zenodo deposit remains a reviewer draft until the journal accepts the article.
