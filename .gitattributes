@@ -1,0 +1,2 @@
+# Preserve committed bytes across platforms for stable SHA-256 verification.
+* -text
