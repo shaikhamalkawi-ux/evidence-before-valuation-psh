@@ -1,6 +1,6 @@
 # ECON-CERT reproducibility resources
 
-This repository accompanies **“From Generation Records to Economic Claims: Evidence Boundaries for Pumped-Storage Hydropower”** (ECON-CERT TESEA P9). It preserves the scientific baseline `ECON_CERT_R26R3` and the supporting Wivenhoe field-attribution records from R26R2. It contains code, compact derived tables, locked results, and provenance records; it is not a complete archive of every upstream raw source.
+This repository accompanies **“From Generation Records to Economic Claims: Evidence Boundaries for Pumped-Storage Hydropower”** (ECON-CERT TESEA P10). It preserves the scientific baseline `ECON_CERT_R26R3` and the supporting Wivenhoe field-attribution records from R26R2. It contains code, compact derived tables, locked results, and provenance records; it is not a complete archive of every upstream raw source.
 
 ## Research scope and locked results
 
@@ -40,4 +40,4 @@ Citation metadata are in `CITATION.cff`. The four-author order is Ghassan Malkaw
 
 ## Rights
 
-`LICENSE` applies only to original code. Data and derived-table rights, attribution, and upstream gaps are described separately in `DATA_AND_RIGHTS.md`; the code license does not grant rights to third-party source material. No Zenodo DOI is claimed in this repository. The Zenodo deposit remains a reviewer draft until the journal accepts the article.
+`LICENSE` applies only to original code. Data and derived-table rights, attribution, and upstream gaps are described separately in `DATA_AND_RIGHTS.md`; the code license does not grant rights to third-party source material. No Zenodo record or DOI is claimed in this repository. The companion Zenodo reviewer record is planned as an unpublished draft; public release is not authorized before documented journal acceptance.
