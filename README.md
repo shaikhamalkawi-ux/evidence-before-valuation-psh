@@ -1,15 +1,16 @@
 # ECON-CERT reproducibility resources
 
-This repository accompanies **“From Generation Records to Economic Claims: Evidence Boundaries for Pumped-Storage Hydropower”** (ECON-CERT TESEA P10). It preserves the scientific baseline `ECON_CERT_R26R3` and the supporting Wivenhoe field-attribution records from R26R2. It contains code, compact derived tables, locked results, and provenance records; it is not a complete archive of every upstream raw source.
+This repository accompanies the prepared research manuscript **“Evidence Before Valuation in Pumped-Storage Hydropower: A Hatta Economic Application and a Wivenhoe Dispatch Audit”** (**ECON-CERT TESEA P18**, 12 November 2026). P18 is a journal-facing editorial version, **not a new scientific-results version**. As of 12 November 2026, the manuscript had not yet been submitted to TESEA or peer reviewed.
+
+The locked scientific calculations remain based on `ECON_CERT_R26R3`, with the Wivenhoe operational-record analysis and the later 2025 six-episode/90-interval census preserved. This repository contains code, compact derived tables, locked results, and provenance records; it is **not** a complete archive of every upstream raw source.
 
 ## Research scope and locked results
 
-- Hatta reported 2025 generation: 48,222 MWh; storage energy per full-discharge equivalent: 1,500 MWh; favorable throughput stress: 32.148 FDE/year.
-- Primary strict Hatta decision boundary: 54.636–105.883 FDE/year; required service fraction at 32.148 FDE/year: q = 1.700–2.815, outside q ∈ [0,1]. The result is a public-information No-Certificate, not a finding of project failure or negative value.
-- Wivenhoe 2025 census: six Queensland Actual-LOR episodes and 90 accepted five-minute intervals. The records establish observed dispatch and market fields only; they do not establish physical availability, delivered reserve service, causal response, reservoir state, or avoided loss.
-- Wivenhoe is an operational-data attribution test, not a second economic valuation case and not validation of Hatta’s economic bridge.
-
-The machine-readable locks and derived Hatta tables are in `verification/` and `data/hatta_derived/`. Compact Wivenhoe derived inputs, source manifests, and outputs are in `data/`, `results/`, and `verification/`.
+- Hatta reported 2025 generation: **48,222 MWh**; nameplate storage energy: **1,500 MWh**; favorable throughput stress: **32.148 full-discharge equivalents (FDE)/year**. Throughput is not a count of qualified resilience events.
+- Primary strict Hatta full-investment decision boundary: **54.636–105.883 FDE/year**; required service fraction at 32.148 FDE/year: **q = 1.700–2.815**, outside q in [0,1]. The public-information **No-Certificate** result is not a finding of project failure, lack of value, or actual unprofitability.
+- Excluding sunk investment in prospective operations-only accounting gives **five of twelve conditionally positive cases**, each dependent on externally transferred fixed-O&M benchmarks; these are not verified project accounts.
+- Wivenhoe 2025 census: **six Queensland Actual-LOR episodes**, **90 complete five-minute intervals**, and **360 four-DUID unit-interval observations**. Five intervals have positive computed Raise Regulation availability with no positive assigned target; the 12 June 2025 episode has 11 intervals with no plant energy or assigned Raise targets.
+- Wivenhoe is an **independent operational-market attribution test**, not a second economic valuation or validation of Hatta's economic bridge. The records do not establish mechanical availability, stored-energy sufficiency, delivered reserves, an event-caused response, or avoided economic loss.
 
 ## Reproduce and verify
 
@@ -23,21 +24,38 @@ python code/adversarial_checks.py
 python scripts/verify_locked_results.py
 ```
 
-`reproduce.py` regenerates the Wivenhoe result tables and 50 result checks from the included filtered January/June 2025 DISPATCHLOAD extract and event crosswalk. `independent_csv_audit.py` independently checks the key joins and findings using only Python’s standard library. `adversarial_checks.py` confirms four deliberately corrupted inputs are rejected. `verify_locked_results.py` checks the manuscript-level Hatta anchors and the Wivenhoe summary against the locked scientific baseline.
+`reproduce.py` regenerates the retained Wivenhoe tables and 50 checks from the included filtered January/June 2025 DISPATCHLOAD extract and event crosswalk. `independent_csv_audit.py` checks the key joins using the Python standard library. `adversarial_checks.py` tests corrupted inputs. `verify_locked_results.py` checks the manuscript-level Hatta anchors and Wivenhoe summary against the locked scientific baseline.
 
-These commands verify the included filtered data and derived results. They do not recreate the full analysis from every original OECD or AEMO monthly archive. `SHA256SUMS.txt` records hashes for the checked-in payload at this commit; the manifest excludes itself.
+These commands verify **the included filtered data and derived results**. They do **not** recreate the full analysis from every original OECD or AEMO monthly archive. `SHA256SUMS.txt` records hashes for checked-in payload files at its documented snapshot; metadata-only changes to this repository do not recertify upstream missing archives.
 
-## Provenance and limits
+## Provenance and limitations
 
-- `data/source_manifest.csv` records the official AEMO retrieval URLs, source sizes and SHA-256 values for the two source months.
-- The repository includes the previously filtered AEMO rows used by the Wivenhoe analysis, not the complete original January and June monthly ZIP archives. The full original OECD ICIO 2016–2022 ZIP is also not verified as preserved. These gaps are not filled with substitute or fabricated data.
-- Hatta derived tables are calculation outputs, not raw DEWA telemetry or a full copy of OECD input data. No confidential project correspondence, credentials, or local working archives are included.
-- AEMO publicly available material is attributed in the data documentation. Upstream sources and field definitions are linked in `data/README.md` and `data/source_manifest.csv`.
+- `data/source_manifest.csv` records official AEMO retrieval URLs, source sizes, and SHA-256 values for two source months.
+- The repository contains project-filtered AEMO rows, not the complete original monthly ZIP archives; the full original OECD ICIO 2016–2022 ZIP was not verified as preserved.
+- Hatta tables are derived computations, not DEWA event-time telemetry or financial accounts.
+- No undocumented event-specific q, causal avoided-loss value, physical plant failure, or realized project profitability is claimed.
+- Source rights and attribution are documented in `DATA_AND_RIGHTS.md`.
 
-## Citation and contributors
+## Citation and authors
 
-Citation metadata are in `CITATION.cff`. The four-author order is Ghassan Malkawi, Ahmed Elsayed, Mohammed Alhagyan, and Bakeel Hussein. The approved CRediT roles are recorded in `AUTHORS_AND_CONTRIBUTIONS.md`. Bakeel Hussein’s ORCID was not independently verified and is intentionally omitted.
+The manuscript's **approved P18 eight-author order** is:
+
+1. Ghassan Malkawi (corresponding author)
+2. Ahmed Elsayed
+3. Hussien Alwedyan
+4. Rafiq Manna
+5. Ashraf AlShalalfeh
+6. Abdulwehab A. Ibrahim
+7. Mohammed Alhagyan
+8. Bakeel Hussein
+
+Current contribution descriptions are in `AUTHORS_AND_CONTRIBUTIONS.md`, and machine-readable citation metadata are in `CITATION.cff`. P18 supersedes older P9/P10 author metadata **for the manuscript**; it does not imply that all eight authors individually wrote repository code.
+
+No public Zenodo DOI or published manuscript DOI is asserted here. Any unpublished Zenodo reviewer-preview link is confidential and must be verified and shared only through the intended editorial channel.
 
 ## Rights
 
-`LICENSE` applies only to original code. Data and derived-table rights, attribution, and upstream gaps are described separately in `DATA_AND_RIGHTS.md`; the code license does not grant rights to third-party source material. No Zenodo record or DOI is claimed in this repository. The companion Zenodo reviewer record is planned as an unpublished draft; public release is not authorized before documented journal acceptance.
+`LICENSE` applies to original code only. `DATA_AND_RIGHTS.md` identifies additional rights, source attribution, and upstream gaps; the code license does not grant rights to third-party material.
+
+---
+**Metadata synchronization:** 12 November 2026. Editorial/repository metadata change only; locked research data, scripts, numerical outputs and scientific claims unchanged.
