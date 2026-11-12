@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use this software or data, cite the associated manuscript and identify the archived version when it becomes public."
-title: "From Generation Records to Economic Claims: Evidence Boundaries for Pumped-Storage Hydropower"
+message: "If you use the code and derived data, cite the repository and its exact version. The associated ECON-CERT TESEA P18 manuscript was under preparation on 12 November 2026; do not invent a journal DOI."
+title: "ECON-CERT reproducibility resources for Evidence Before Valuation in Pumped-Storage Hydropower: A Hatta Economic Application and a Wivenhoe Dispatch Audit"
 type: software
 version: 0.2.0
 authors:
@@ -10,20 +10,30 @@ authors:
   - family-names: Elsayed
     given-names: Ahmed
     orcid: "https://orcid.org/0000-0002-9255-200X"
+  - family-names: Alwedyan
+    given-names: Hussien
+  - family-names: Manna
+    given-names: Rafiq
+  - family-names: AlShalalfeh
+    given-names: Ashraf
+  - family-names: Ibrahim
+    given-names: Abdulwehab A.
   - family-names: Alhagyan
     given-names: Mohammed
     orcid: "https://orcid.org/0000-0003-4090-6125"
   - family-names: Hussein
     given-names: Bakeel
+    orcid: "https://orcid.org/0009-0008-6484-7936"
 repository-code: "https://github.com/shaikhamalkawi-ux/evidence-before-valuation-psh"
 abstract: >-
-  Reproducibility resources for an evidence-boundary analysis of pumped-storage
-  hydropower, using Hatta as the economic decision application and Wivenhoe as
-  an independent operational-data attribution test.
+  Reproducibility resources for the ECON-CERT P18 manuscript. The locked
+  scientific baseline uses Hatta as a conditional economic application
+  and Wivenhoe as an independent operational-market attribution test.
+  The repository does not contain every original upstream source archive.
 keywords:
   - pumped-storage hydropower
-  - energy-storage valuation
+  - economic valuation
   - project-level attribution
+  - strict dominance
   - partial identification
-  - ancillary services
-  - decision boundaries
+  - energy-system resilience
