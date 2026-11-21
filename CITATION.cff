@@ -1,8 +1,9 @@
 cff-version: 1.2.0
-message: "If you use the code and derived data, cite the repository and its exact version. The associated ECON-CERT TESEA P18 manuscript was under preparation on 12 November 2026; do not invent a journal DOI."
-title: "ECON-CERT reproducibility resources for Evidence Before Valuation in Pumped-Storage Hydropower: A Hatta Economic Application and a Wivenhoe Dispatch Audit"
+message: "Cite this public repository and its exact Git commit when using the retained code and derived data. The associated ECON-CERT P20E5R4-EP2 manuscript remains under author review; do not invent a journal or Zenodo DOI."
+title: "ECON-CERT: evidence before economic attribution in pumped-storage hydropower (Hatta and Wivenhoe)"
 type: software
-version: 0.2.0
+version: 0.3.0
+date-released: 2026-11-22
 authors:
   - family-names: Malkawi
     given-names: Ghassan
@@ -26,14 +27,16 @@ authors:
     orcid: "https://orcid.org/0009-0008-6484-7936"
 repository-code: "https://github.com/shaikhamalkawi-ux/evidence-before-valuation-psh"
 abstract: >-
-  Reproducibility resources for the ECON-CERT P18 manuscript. The locked
-  scientific baseline uses Hatta as a conditional economic application
-  and Wivenhoe as an independent operational-market attribution test.
-  The repository does not contain every original upstream source archive.
+  Versioned reproducibility material for the manuscript Evidence Before Economic
+  Attribution: A Utility-Planning Audit Framework for Hatta and Wivenhoe Pumped
+  Storage. Includes compact Hatta accounting and Wivenhoe market-observation
+  tables and the locked 48-case response-shape audit, without redistribution
+  of complete upstream raw datasets or claims of empirical E4 validation.
 keywords:
   - pumped-storage hydropower
-  - economic valuation
-  - project-level attribution
+  - utility planning
+  - evidence admission
+  - economic attribution
   - strict dominance
-  - partial identification
-  - energy-system resilience
+  - Wivenhoe
+  - Hatta

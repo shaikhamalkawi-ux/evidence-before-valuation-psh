@@ -1,9 +1,5 @@
-# Zenodo release status and sequence
+# Permanent-archive and DOI status
 
-The P10 companion archive is being prepared for a confidential, unpublished reviewer draft. No Zenodo draft, public record, or functioning DOI is claimed here until one has actually been created and verified. A DOI reserved in a draft remains unpublished and is not a public citation.
+As of **22 November 2026**, this GitHub repository is public, but **no public Zenodo DOI or published article DOI has been verified** for the ECON-CERT P20E5R4-EP2 manuscript. Do not cite a placeholder DOI or imply the manuscript has been accepted or reviewed by the journal.
 
-Upload the verified archive as a separate manual deposit. Do not also enable automatic GitHub-to-Zenodo archiving for this payload; that can create a second DOI record for the same materials.
-
-After the journal documents acceptance, perform the final file and rights checks, publish the reviewed Zenodo draft, verify the public DOI resolves, and create a matching tagged GitHub release from the exact archived commit. Add the DOI to this README, `CITATION.cff`, and the final manuscript availability statement only after it is registered and resolving. After the article is published, add the article DOI as a related identifier.
-
-The GitHub repository remains the working source. The Zenodo record will identify one immutable version. Preserve the exact commit SHA and archive SHA-256 in the handoff.
+Before any formal archived release, confirm third-party redistribution terms, metadata and all-author approval; remove restricted imagery; verify that the frozen archive contains the intended source-scoped data and scripts. For a future DOI-bearing archive, use **one** documented deposition route, retain the exact repository commit SHA and archive digest, and add the DOI to `README.md`, `CITATION.cff` and the manuscript **only after a public resolver check succeeds**. GitHub's versioned commit URL remains sufficient for precise provenance in the interim.

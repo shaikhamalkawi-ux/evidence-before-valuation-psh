@@ -1,0 +1,30 @@
+name: Verify retained ECON-CERT evidence package
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install declared dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Reproduce existing bounded Wivenhoe tables
+        run: python code/reproduce.py
+      - name: Independent exact-key CSV audit
+        run: python code/independent_csv_audit.py
+      - name: Adversarial input checks
+        run: python code/adversarial_checks.py
+      - name: Verify archived R26R3 numeric anchors
+        run: python scripts/verify_locked_results.py
+      - name: Verify 48-case response-shape audit (381 checks)
+        run: python verification/p20/test_service_response_envelope.py
+      - name: Verify versioned SHA256 manifest
+        run: sha256sum --check SHA256SUMS.txt

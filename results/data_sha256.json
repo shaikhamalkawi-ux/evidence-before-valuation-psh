@@ -6,12 +6,12 @@
   },
   {
     "path": "data/AEMO_2025_WIVENHOE_EVENT_DISPATCH_DETAIL.csv",
-    "sha256": "919735b7aa4ca3c664dab9c207976664fbabbecdb038451c4383fc4fa2c63d3a",
-    "bytes": 20518
+    "sha256": "3136153b90f69abfb8e422a595dccafc4f1d1fb420ef2c8b3af4bcc22950c994",
+    "bytes": 20428
   },
   {
     "path": "data/AEMO_2025_WIVENHOE_EPISODE_DISPATCH_SUMMARY.csv",
-    "sha256": "ae9f99172872dfa29ef12beebcfd3e1a96cb0aac75d45d6ba9751b412d159201",
-    "bytes": 944
+    "sha256": "0218223c43c0197ce4b802925cde482549b1687b213bec0dc73797d09577d558",
+    "bytes": 937
   }
 ]

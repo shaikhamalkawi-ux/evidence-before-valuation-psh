@@ -1,18 +1,20 @@
-# Data contents
+# Data contents and source boundaries
 
-This directory contains compact derived and filtered records used by the Wivenhoe operational-data attribution checks, plus selected Hatta calculation outputs. It does not contain the complete original OECD ICIO or AEMO monthly archives.
+This directory contains compact, filtered Wivenhoe operational-market records and Hatta **derived accounting** tables. It does not contain the complete original OECD ICIO 2016–2022 archive, the full AEMO monthly source ZIPs, DEWA telemetry, or measured economic counterfactuals.
 
-## Wivenhoe source and derived data
+## Wivenhoe (previously locked files; unchanged in the 2026-11-22 sync)
 
-- `WIVENHOE_DISPATCHLOAD_2025JAN_JUN.csv.gz`: the previously filtered 70,272-row January/June 2025 DISPATCHLOAD extract used in the locked analysis.
-- `AEMO_2025_WIVENHOE_EVENT_DISPATCH_DETAIL.csv` and `AEMO_2025_WIVENHOE_EPISODE_DISPATCH_SUMMARY.csv`: the six-episode, 90-interval event crosswalk and summary.
-- `FCAS_unit_episode_summary.csv`, `FCAS_unit_strict_witnesses.csv`, `FCAS_pairwise_observed_implications.csv`, `FCAS_episode_chain_6.csv`, and `FCAS_interval_state_matrix_90.csv`: generated result tables.
-- `source_manifest.csv`: the two official source URLs, expected archive sizes and SHA-256 values, plus the actual filtered row counts.
+- `WIVENHOE_DISPATCHLOAD_2025JAN_JUN.csv.gz`: 70,272 previously filtered January/June 2025 DISPATCHLOAD rows for `W/HOE#1`, `W/HOE#2`, `PUMP1`, and `PUMP2`.
+- `AEMO_2025_WIVENHOE_EVENT_DISPATCH_DETAIL.csv`, `AEMO_2025_WIVENHOE_EPISODE_DISPATCH_SUMMARY.csv`: six-source-episode, 90-interval crosswalk and summary.
+- `FCAS_unit_episode_summary.csv`, `FCAS_unit_strict_witnesses.csv`, `FCAS_pairwise_observed_implications.csv`, `FCAS_episode_chain_6.csv`, and `FCAS_interval_state_matrix_90.csv`: source-derived market-signal tables.
+- `source_manifest.csv`: official AEMO retrieval URLs, expected upstream archive sizes and hashes, with retained filtered-row counts.
 
-Data were filtered to four Wivenhoe DUIDs: `W/HOE#1`, `W/HOE#2`, `PUMP1`, and `PUMP2`. Generation and pumping are aggregated separately. Market dispatch availability and targets are not measurements of physical readiness or delivered service.
+The market's `RAISEREGACTUALAVAILABILITY` is a computed offer/dispatch field; it does **not** measure mechanical plant availability, event-time stored energy, physical FCAS delivery or avoided economic losses. The two full original AEMO monthly ZIPs are **not** redistributed. See [AEMO copyright permissions](https://www.aemo.com.au/privacy-and-legal-notices/copyright-permissions).
 
-The original January and June source ZIP files are not included; the hashes in the manifest document the expected upstream versions, not a claim that those complete ZIPs are preserved here. AEMO publicly released materials are used with attribution under AEMO’s [copyright permissions](https://www.aemo.com.au/privacy-and-legal-notices/copyright-permissions). Field semantics are linked to the official [AEMO MMS data model](https://visualisations.aemo.com.au/aemo/nemweb/MMSDataModelReport/Electricity/MMS%20Data%20Model%20Report_files/MMS_128.htm).
+## Hatta (previously locked files; unchanged in the 2026-11-22 sync)
 
-## Hatta derived outputs
+`hatta_derived/` retains the seven UAE accounting-source-year values, 12 distinct primary cost-scope comparisons, 48 cost/rate stress cases, 84 leave-one-year-out comparisons and five positive operating-only witnesses, as source-scoped **derived calculation outputs**. None is a measured Hatta qualified-event count, usable SOC, O&M account or avoided-unserved-energy value. The original OECD ICIO archive is **not** redistributed.
 
-`hatta_derived/` contains selected R26R3 derived tables for the seven annual states, 84 leave-one-source-year-out cases, the 12 primary scope comparisons, 48 sensitivity comparisons, five positive operating-scope witnesses, and 24 archived-case regression comparisons. These are calculation outputs, not the original OECD input archive or raw DEWA records. Their summary lock and independent replay records are in `../verification/`.
+## New P20 verification supplements (no raw upstream data)
+
+`../verification/p20/` publishes the **previously calculation-locked** 48-case input ledger, response-shape upper/lower margin audit, exact deterministic verification script and 381-check summary, plus the Figure 5 84-cell positional audit and the four corrected Table A.1 source-row witnesses. These records do **not** replace the R26R3 empirical/operational baseline or add measured project benefits.
