@@ -9,3 +9,5 @@
 **Reproducibility boundaries:** The 48-case verifier performs 381 deterministic checks under explicitly declared source-conditioned model assumptions. Its output does not substantiate measured resilience-service delivery, a physical availability lower bound, a local counterfactual, E4 economic certification, or full original-source regeneration of OECD and AEMO raw archives.
 
 **Rights and submission:** Only original scripts and derived material are added. Original external photographs are not included. The TESEA manuscript is not yet approved for submission: third-party image rights, all-author sign-off, and APC wording versus the journal's fee policy remain unresolved. No repository or manuscript DOI is asserted. Historical materials remain available at their previous commits.
+
+**Remote-CI metadata correction:** The previous `results/data_sha256.json` described two stale versions of the filtered Wivenhoe CSV files. That descriptor was regenerated from the SHA-256 digests and byte lengths of the unchanged CSV files actually committed to this repository. No operational inputs, event membership, results, or source-derived scientific table were modified.
