@@ -1,61 +1,43 @@
-# ECON-CERT reproducibility resources
+# ECON-CERT: evidence before economic attribution in pumped-storage hydropower
 
-This repository accompanies the prepared research manuscript **“Evidence Before Valuation in Pumped-Storage Hydropower: A Hatta Economic Application and a Wivenhoe Dispatch Audit”** (**ECON-CERT TESEA P18**, 12 November 2026). P18 is a journal-facing editorial version, **not a new scientific-results version**. As of 12 November 2026, the manuscript had not yet been submitted to TESEA or peer reviewed.
+Companion **public, source-bounded reproducibility repository** for the author-review manuscript:
 
-The locked scientific calculations remain based on `ECON_CERT_R26R3`, with the Wivenhoe operational-record analysis and the later 2025 six-episode/90-interval census preserved. This repository contains code, compact derived tables, locked results, and provenance records; it is **not** a complete archive of every upstream raw source.
+> **Evidence Before Economic Attribution: A Utility-Planning Audit Framework for Hatta and Wivenhoe Pumped Storage**  
+> Manuscript version **ECON-CERT P20E5R4-EP2 (22 November 2026)**, prepared for *Transactions on Energy Systems and Engineering Applications (TESEA)*. The journal manuscript is **not yet submitted or peer-reviewed**; author and image-rights release gates remain open.
 
-## Research scope and locked results
+The manuscript's **scientific calculations remain locked** to the admitted ECON-CERT R26R3/P20 lineage. The newer P20E5R4-EP2 revision is editorial, production, and manuscript/repository-metadata work; it does not introduce new plant telemetry, a new valuation model, or revised economic results. This repository's content is a bounded reproducibility package, **not** a full original-source data release.
 
-- Hatta reported 2025 generation: **48,222 MWh**; nameplate storage energy: **1,500 MWh**; favorable throughput stress: **32.148 full-discharge equivalents (FDE)/year**. Throughput is not a count of qualified resilience events.
-- Primary strict Hatta full-investment decision boundary: **54.636–105.883 FDE/year**; required service fraction at 32.148 FDE/year: **q = 1.700–2.815**, outside q in [0,1]. The public-information **No-Certificate** result is not a finding of project failure, lack of value, or actual unprofitability.
-- Excluding sunk investment in prospective operations-only accounting gives **five of twelve conditionally positive cases**, each dependent on externally transferred fixed-O&M benchmarks; these are not verified project accounts.
-- Wivenhoe 2025 census: **six Queensland Actual-LOR episodes**, **90 complete five-minute intervals**, and **360 four-DUID unit-interval observations**. Five intervals have positive computed Raise Regulation availability with no positive assigned target; the 12 June 2025 episode has 11 intervals with no plant energy or assigned Raise targets.
-- Wivenhoe is an **independent operational-market attribution test**, not a second economic valuation or validation of Hatta's economic bridge. The records do not establish mechanical availability, stored-energy sufficiency, delivered reserves, an event-caused response, or avoided economic loss.
+## What the evidence supports
 
-## Reproduce and verify
+- **Hatta, UAE:** DEWA reports **48,222 MWh** of 2025 generation, equal to **32.148** nameplate full-discharge equivalents (1,500 MWh/FDE), **not** 32.148 qualified resilience events. At hypothetical full delivery (`q = 1`), all **24** tested full-investment cases have nonpositive strict margins; the **12 primary** strict annual-service boundaries span **54.636–105.883 FDE/year**. Five of 12 distinct primary operating-only cost cases are conditionally positive when sunk capital is excluded. No project-level economic certificate follows from the public evidence.
+- **Wivenhoe, Australia:** Six Queensland 2025 Actual-LOR episodes provide **90 complete five-minute plant intervals** and **360 matched DUID/interval records**. Positive energy targets appear in **79** intervals, an enabled Raise Regulation flag in **62**, computed-positive availability in **57**, and an assigned-positive Raise Regulation target in **52**. Five computed-positive availability intervals have no positive assigned target. These are market fields, **not** proof of physical reserve delivery or avoided outage losses.
+- **Response-shape check:** In the locked 48-case test under an expressly assumed full-event accounting-benefit ceiling, all **24 full-investment** upper-bound cases remain negative. This is not empirical calibration of a nonlinear response or validation of actual avoided damage.
 
-Requirements: Python 3.10 or later and pandas 2.0 or later. From a fresh checkout, run:
+## Files, scope, and exact reproduction
 
-```powershell
+- `data/WIVENHOE_DISPATCHLOAD_2025JAN_JUN.csv.gz`: existing filtered 70,272-row official-source extract for four named Wivenhoe DUIDs; **not** the upstream AEMO monthly source ZIPs.
+- `data/AEMO_2025_WIVENHOE_EVENT_DISPATCH_DETAIL.csv`, `data/FCAS_*`, `data/source_manifest.csv`: accepted event/interval crosswalk, recorded dispatch-field classifications, source identifiers, and public source fingerprints.
+- `data/hatta_derived/`: seven historical accounting values, 12 primary cost-scope comparisons, 48 sensitivity cases, 84 source-year deletions, and other derived result tables; **not** original OECD ICIO matrices or DEWA SCADA/accounts.
+- `verification/`: frozen R26R3 checks. `verification/p20/` adds source-identical 48-case response-shape audit inputs, verified output, exact original Python verifier, archived Figure 5 84-cell check, and four previously corrected Table A.1 comparison rows. These are **derived/audit records**, not new physical evidence.
+- `SHA256SUMS.txt`: repository-file SHA-256 inventory for the synchronized metadata and research payload; `verification/p20/SHA256SUMS.txt` additionally covers the retained P20 audit files.
+
+From the repository root using Python **3.10+**:
+
+```bash
 python -m pip install -r requirements.txt
 python code/reproduce.py
 python code/independent_csv_audit.py
 python code/adversarial_checks.py
 python scripts/verify_locked_results.py
+python verification/p20/test_service_response_envelope.py
 ```
 
-`reproduce.py` regenerates the retained Wivenhoe tables and 50 checks from the included filtered January/June 2025 DISPATCHLOAD extract and event crosswalk. `independent_csv_audit.py` checks the key joins using the Python standard library. `adversarial_checks.py` tests corrupted inputs. `verify_locked_results.py` checks the manuscript-level Hatta anchors and Wivenhoe summary against the locked scientific baseline.
+The first four scripts verify **the retained filtered inputs and locked source-derived tables**. The last script performs **381 deterministic checks** on the published 48-case ledger and rewrites its two retained verification outputs. It does not recreate upstream OECD/AEMO raw-source extraction. For manifest checking on a clean checkout: `sha256sum -c SHA256SUMS.txt` (GNU coreutils); re-run the producing scripts first only when intentionally reproducing their outputs.
 
-These commands verify **the included filtered data and derived results**. They do **not** recreate the full analysis from every original OECD or AEMO monthly archive. `SHA256SUMS.txt` records hashes for checked-in payload files at its documented snapshot; metadata-only changes to this repository do not recertify upstream missing archives.
+## Citation and scientific limits
 
-## Provenance and limitations
+GitHub citation metadata are in [`CITATION.cff`](CITATION.cff); the source-to-claim and licensing limitations are in [`DATA_AND_RIGHTS.md`](DATA_AND_RIGHTS.md), [`data/README.md`](data/README.md), and [`docs/CLAIM_BOUNDARIES.md`](docs/CLAIM_BOUNDARIES.md). Use the repository **commit SHA** to identify the exact material reused. No manuscript DOI or public permanent repository DOI is asserted.
 
-- `data/source_manifest.csv` records official AEMO retrieval URLs, source sizes, and SHA-256 values for two source months.
-- The repository contains project-filtered AEMO rows, not the complete original monthly ZIP archives; the full original OECD ICIO 2016–2022 ZIP was not verified as preserved.
-- Hatta tables are derived computations, not DEWA event-time telemetry or financial accounts.
-- No undocumented event-specific q, causal avoided-loss value, physical plant failure, or realized project profitability is claimed.
-- Source rights and attribution are documented in `DATA_AND_RIGHTS.md`.
+The Hatta accounting values are **conditional model stress values**, not measured lost-load welfare or realized profit. Source-document overlap at Wivenhoe does not by itself demonstrate an event-caused dispatch response, usable stored reservoir energy, service delivery, or economic loss avoided. No original third-party photographs, raw OECD ICIO archive, or complete raw AEMO monthly archives are redistributed here. This update does not clear image permissions, coauthor submission approval, or TESEA article-processing-charge wording.
 
-## Citation and authors
-
-The manuscript's **approved P18 eight-author order** is:
-
-1. Ghassan Malkawi (corresponding author)
-2. Ahmed Elsayed
-3. Hussien Alwedyan
-4. Rafiq Manna
-5. Ashraf AlShalalfeh
-6. Abdulwehab A. Ibrahim
-7. Mohammed Alhagyan
-8. Bakeel Hussein
-
-Current contribution descriptions are in `AUTHORS_AND_CONTRIBUTIONS.md`, and machine-readable citation metadata are in `CITATION.cff`. P18 supersedes older P9/P10 author metadata **for the manuscript**; it does not imply that all eight authors individually wrote repository code.
-
-No public Zenodo DOI or published manuscript DOI is asserted here. Any unpublished Zenodo reviewer-preview link is confidential and must be verified and shared only through the intended editorial channel.
-
-## Rights
-
-`LICENSE` applies to original code only. `DATA_AND_RIGHTS.md` identifies additional rights, source attribution, and upstream gaps; the code license does not grant rights to third-party material.
-
----
-**Metadata synchronization:** 12 November 2026. Editorial/repository metadata change only; locked research data, scripts, numerical outputs and scientific claims unchanged.
+**Repository synchronization:** 22 November 2026. Newly published P20 audit data/verifier are frozen from the previously verified manuscript package. Historical R26R3 empirical/operational files are not modified.

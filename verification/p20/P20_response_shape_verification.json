@@ -1,0 +1,26 @@
+{
+  "version": "P20 source-conditioned service-response-shape diagnostic",
+  "scope": "No new event observation or calibrated service-value shape. Full benefit B_s remains an ICIO accounting proxy, not E4. The input 48-case ledger is a previously independently replayed set of P19 locked results.",
+  "assumption": "0 <= h_s(z) <=1, nondecreasing, h_s(0)=0,h_s(1)=1, B_s fixed full-FDE ceiling for the same declared event and valuation scope; q is joint delivered service fraction lower bound; study retains only source year and cost case envelope.",
+  "conditional_model_boundary": "For any 0<q<1, without a numerical lower response-function bound, the strict conditional annual margin range is [existing q0 lower endpoint, existing q1 upper endpoint]. For q=1 the upper endpoint is exact; the original qB_s assumption corresponds to the special h_s(z)=z, NOT a universal guarantee.",
+  "n_cases": 48,
+  "n_full_investment": 24,
+  "n_operating": 24,
+  "n_full_investment_upper_negative": 24,
+  "n_full_investment_even_Bmax_negative": 24,
+  "n_operating_strict_positive_only_at_full_assumed_benefit": 10,
+  "n_operating_any_state_positive_at_full_assumed_benefit": 12,
+  "max_primary_full_strict_margin_million_USD_per_year": -3.420202085438,
+  "max_primary_full_Bmax_margin_million_USD_per_year": -2.445442577438,
+  "n_checks": 381,
+  "n_pass": 381,
+  "source_file": "48_case_independent_prior_replay.csv",
+  "source_sha256": "fc1724512cd655552b8bd5ba15ad6c64737b55376c25f9fc8793b00f338b3819",
+  "cautions": [
+    "This is not independent external empirical validation of ECON-CERT.",
+    "No new numerical event value is inferred.",
+    "The full-event benefit cap is an explicit conditional assumption, not physical law or observed welfare.",
+    "The original q-dependent thresholds are valid under the original linear response assumption; they do not carry over unchanged to arbitrary shapes.",
+    "The Hatta public-information No-Certificate remains separate from the source-conditioned negative q=1 full-investment stress."
+  ]
+}
